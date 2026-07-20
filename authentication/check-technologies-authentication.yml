@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.checkhq.com/reference/authentication
+docs: https://docs.checkhq.com/reference/authentication
+summary:
+  types: [http, oauth2]
+  http_scheme: bearer
+  api_key_in: [header]
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  in: header
+  header: Authorization
+  format: 'Authorization: Bearer <API_KEY>'
+  description: >-
+    All API requests authenticate with an Authorization header carrying a
+    Bearer token (the API key). API keys are issued per environment
+    (sandbox vs production). Keys can be scoped with optional IP restrictions
+    for an extra layer of security.
+- name: ecosystemPartnerOAuth
+  type: oauth2
+  description: >-
+    Ecosystem Partners integrate via an OAuth flow to gain scoped access to
+    partner companies' Check data (see the Ecosystem Partner Guide).
+  docs: https://docs.checkhq.com/docs/check-oauth-integrations
+mcp_auth:
+  description: >-
+    The hosted Check MCP server uses browser-based OAuth via Check Console
+    login instead of static API keys.
+  docs: https://docs.checkhq.com/docs/hosted-remote
+extras:
+  ip_restrictions: supported
