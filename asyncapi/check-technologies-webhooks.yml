@@ -1,0 +1,96 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.checkhq.com/docs/webhook-event-types
+type: Webhooks
+docs:
+  overview: https://docs.checkhq.com/docs/webhooks-1
+  working_with: https://docs.checkhq.com/docs/working-with-webhooks
+  event_types: https://docs.checkhq.com/docs/webhook-event-types
+  receiving: https://docs.checkhq.com/docs/the-shape-of-your-webhook-endpoint
+delivery:
+  topic_header: Check-Topic
+  description: >-
+    Each webhook request includes a Check-Topic header identifying the event
+    type. Configure a webhook endpoint to receive events.
+event_types:
+  payroll:
+  - payroll.created
+  - payroll.deleted
+  - payroll.updated
+  - payroll.status_change
+  documents:
+  - company_tax_document.created
+  - company_tax_document.deleted
+  - company_authorization_document.created
+  - company_authorization_document.deleted
+  - employee_tax_document.created
+  - employee_tax_document.deleted
+  - contractor_tax_document.created
+  - contractor_tax_document.deleted
+  - setup_document.created
+  - setup_document.deleted
+  bank_accounts:
+  - bank_account.created
+  - bank_account.updated
+  - bank_account.deleted
+  benefits_and_deductions:
+  - benefit.created
+  - benefit.updated
+  - benefit.deleted
+  - company_benefit.created
+  - company_benefit.updated
+  - company_benefit.deleted
+  - post_tax_deduction.created
+  - post_tax_deduction.updated
+  - post_tax_deduction.deleted
+  company_and_people:
+  - company.created
+  - company.updated
+  - company_terminated.created
+  - company_terminated.updated
+  - employee.created
+  - employee.updated
+  - employee.deleted
+  - contractor.created
+  - contractor.updated
+  - contractor.deleted
+  operations:
+  - workplace.created
+  - workplace.updated
+  - workplace.deleted
+  - earning_code.created
+  - earning_code.updated
+  - earning_code.deleted
+  - earning_rate.created
+  - earning_rate.updated
+  - pay_schedule.created
+  - pay_schedule.updated
+  - pay_schedule.deleted
+  - net_pay_split.created
+  - net_pay_split.updated
+  payments_and_filings:
+  - payment.status_change
+  - federal_ein_verification.created
+  - federal_ein_verification.updated
+  - requirement.created
+  - requirement.updated
+  - requirement.deleted
+  - company_processing_status.status_change
+  - tax_filing.created
+  - tax_filing.updated
+  - tax_filing.status_change
+  - tax_filing.deleted
+  - company_filing.created
+  - company_filing.updated
+  - company_filing.deleted
+  administration:
+  - integration_access.created
+  - integration_access.updated
+  - integration_access.deleted
+  - enrollment_profile.created
+  - enrollment_profile.updated
+  - setup.created
+  - setup.updated
+  - fulfillment.created
+  - fulfillment.deleted
+  - notification.created

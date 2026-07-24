@@ -1,0 +1,39 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.checkhq.com/docs/check-command-line-interface-cli
+name: check
+language: python
+description: >-
+  First-party Check command-line interface. Organized by resource type, it
+  wraps the Check Payroll API (~270 functions across 18 resource groups) for
+  scripts and CI/CD. Output defaults to JSON for piping with jq and Unix tools.
+  Distributed alongside the Check MCP server repository.
+repo: https://github.com/check-technologies/mcp-server-check
+install:
+  package_manager: uv
+  steps:
+  - curl -LsSf https://astral.sh/uv/install.sh | sh   # install uv (mac/linux)
+  - git clone https://github.com/check-technologies/mcp-server-check.git
+  - cd mcp-server-check
+  - uv sync
+  global_install: uv tool install -e .
+invocation: check <group> <command>
+resource_groups:
+- name: companies
+  commands: [list, get, create, update, onboard, get-paydays]
+- name: employees
+  commands: [list, get, create, update, onboard, list-paystubs]
+- name: payrolls
+  commands: [list, get, create, approve, preview, simulate-start-processing]
+- name: contractors
+- name: bank-accounts
+- name: payments
+- name: webhooks
+# plus additional groups (18 total), mirroring the API resource surface
+key_flows:
+- name: Payroll processing
+  steps: [Create payroll, Add items, Preview, Approve, Simulate processing]
+- name: Employee onboarding
+  steps: [Create employee, Onboard, Check forms]
+- name: Reporting
+  steps: [Generate payroll journals, tax liabilities, W-2 previews]

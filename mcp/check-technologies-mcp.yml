@@ -1,0 +1,60 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://docs.checkhq.com/docs/overview-1
+server:
+  name: check
+  description: >-
+    Official Check MCP server exposing the Check Payroll API as Model Context
+    Protocol tools for AI agents and operator copilots. Available hosted
+    (remote, run by Check) and self-hosted.
+  transport: http
+  transport_detail: Streamable HTTP
+  auth: >-
+    Browser-based OAuth via Check Console login. The MCP client initiates an
+    OAuth flow, the user authorizes in the browser, and the client receives a
+    token automatically. No API keys to copy/paste.
+  endpoints:
+    production: https://mcp.checkhq.com/check/mcp
+    sandbox: https://mcp.sandbox.checkhq.com/check/mcp
+  self_hosted:
+    repo: https://github.com/check-technologies/mcp-server-check
+    language: python
+  clients:
+  - Claude Desktop
+  - Cursor
+  - GitHub Copilot
+  - ChatGPT
+  - Google Gemini
+docs:
+  overview: https://docs.checkhq.com/docs/overview-1
+  hosted: https://docs.checkhq.com/docs/hosted-remote
+  self_hosted: https://docs.checkhq.com/docs/self-hosted
+# Dynamic tool-discovery model: rather than loading all tools, the server
+# exposes three meta-tools that navigate 18 toolsets.
+meta_tools:
+- name: search_tools
+  description: Locate relevant tools by keyword.
+- name: run_tool
+  description: Execute a tool by name with arguments.
+- name: list_toolsets
+  description: Browse the available toolsets.
+toolsets:
+- bank_accounts
+- companies
+- compensation
+- components
+- contractor_payments
+- contractors
+- documents
+- employees
+- external_payrolls
+- forms
+- payments
+- payroll_items
+- payrolls
+- platform
+- tax
+- webhooks
+- workflows
+- workplaces

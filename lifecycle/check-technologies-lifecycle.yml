@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.checkhq.com/reference/versioning
+versioning:
+  scheme: date-based
+  header: Check-Version
+  example: '2021-01-15'
+  default: >-
+    Accounts are assigned a default API version at creation matching the latest
+    available version at that time; requests without an explicit Check-Version
+    header use the account default.
+  docs: https://docs.checkhq.com/reference/versioning
+deprecation:
+  policy_url: https://docs.checkhq.com/page/api-changelog
+  mechanism: >-
+    Version changes and deprecations are communicated through the API Changelog;
+    partners request version changes via support (self-serve version management
+    noted as planned).
+status_page: https://status.checkhq.com
+status_page_docs: https://docs.checkhq.com/docs/status-page
+sla:
+  note: >-
+    Check reports high reliability publicly (e.g. 99.9% W-2 filing success) but
+    no formal uptime SLA document was found on the public docs.
+deprecated_operations: []

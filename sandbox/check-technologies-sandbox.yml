@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.checkhq.com/docs/understanding-sandbox-and-production-environments
+docs:
+  environments: https://docs.checkhq.com/docs/understanding-sandbox-and-production-environments
+  testing_payments: https://docs.checkhq.com/docs/testing-payments-in-sandbox
+environments:
+  sandbox:
+    console: https://sandbox.checkhq.com/
+    api: https://api.checkhq.com
+    key_type: sandbox API key
+  production:
+    api: https://api.checkhq.com
+    key_type: production API key
+processing_simulation:
+  default_mode: automatic
+  behavior: >-
+    In automatic simulation mode (default), payrolls automatically transition
+    to the next phase of payroll processing approximately every 5 minutes.
+# Magic values published for failure simulation (verbatim from docs).
+magic_test_values:
+- scenario: Non-sufficient funds (NSF) failure
+  set: company.trade_name
+  value: "NSF Co."
+- scenario: No account / funding failure
+  set: company.trade_name
+  value: "No Account Co."
+- scenario: Closed bank account (direct deposit) failure
+  set: employee.first_name = "Barry", employee.last_name = "BadAccount"
+  value: "Barry BadAccount"
+notes:
+- No published test bank account numbers, routing numbers, or test SSNs were
+  found in the sandbox docs; failure simulation is driven by the magic names above.

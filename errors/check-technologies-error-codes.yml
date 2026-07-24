@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.checkhq.com/reference/error-codes
+docs: https://docs.checkhq.com/reference/error-codes
+description: >-
+  Check returns machine-readable error code identifiers on failed requests.
+  The list below is captured verbatim from the public error-codes reference
+  (a partial set of the full table; the docs list ~40 codes). Payroll-specific
+  errors that arise during payroll preview are documented separately.
+preview_errors_ref: https://docs.checkhq.com/reference/errors-during-payroll-preview
+error_codes:
+- code: address_invalid
+- code: api_error
+- code: company_blocking
+- code: company_not_implemented
+- code: company_tax_setup_required
+- code: contractor_payment_already_exists
+- code: contractor_payment_limit_exceeded
+- code: disallowed_environment
+- code: earning_code_already_exists
+- code: employee_benefit_effective_date_overlap
+- code: federal_tax_liability_exceeds_100k
+- code: net_pay_negative
+- code: non_empty_payroll_required
+- code: payroll_already_approved
+- code: throttled
+- code: validation_error
+notes:
+- HTTP status mapping and the exact JSON error envelope shape were not fully
+  published on the reference page captured; codes above are the documented
+  identifiers.

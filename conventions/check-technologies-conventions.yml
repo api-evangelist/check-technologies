@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.checkhq.com/docs/overview
+docs:
+  idempotency: https://docs.checkhq.com/docs/idempotent-requests
+  pagination: https://docs.checkhq.com/docs/pagination
+  rate_limiting: https://docs.checkhq.com/docs/rate-limiting
+  metadata: https://docs.checkhq.com/docs/metadata-1
+  batching: https://docs.checkhq.com/docs/batching-edits
+  bulk_get: https://docs.checkhq.com/docs/bulk-resource-get-requests
+  request_logs: https://docs.checkhq.com/docs/request-logs
+  sensitive_data: https://docs.checkhq.com/docs/sensitive-data-api
+authentication:
+  style: Bearer token (API key) in Authorization header
+  ref: authentication/check-technologies-authentication.yml
+idempotency:
+  supported: true
+  docs: https://docs.checkhq.com/docs/idempotent-requests
+  description: >-
+    Check supports idempotent requests so a create call can be safely retried
+    without creating duplicate resources.
+pagination:
+  supported: true
+  docs: https://docs.checkhq.com/docs/pagination
+  description: Check's list endpoints return paginated responses.
+metadata:
+  supported: true
+  docs: https://docs.checkhq.com/docs/metadata-1
+  description: Resources support a metadata field for attaching custom key/value data.
+rate_limiting:
+  supported: true
+  docs: https://docs.checkhq.com/docs/rate-limiting
+  error_code: throttled
+bulk_and_batch:
+  batching_edits: https://docs.checkhq.com/docs/batching-edits
+  bulk_get: https://docs.checkhq.com/docs/bulk-resource-get-requests
+versioning:
+  scheme: date-based
+  header: Check-Version
+  ref: lifecycle/check-technologies-lifecycle.yml
+errors:
+  ref: errors/check-technologies-error-codes.yml
+  reference: https://docs.checkhq.com/reference/error-codes
+webhooks:
+  ref: asyncapi/check-technologies-webhooks.yml
+  topic_header: Check-Topic

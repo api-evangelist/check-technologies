@@ -1,0 +1,36 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.checkhq.com/changelog
+docs:
+  changelog: https://www.checkhq.com/changelog
+  api_upgrades: https://docs.checkhq.com/page/api-changelog
+scheme: date-based
+version_header: Check-Version
+version_example: '2021-01-15'
+note: >-
+  Check pins API behavior with a date-based Check-Version header; accounts get a
+  default version at creation. The public changelog paginates ~79 pages of dated
+  entries; recent window captured below (dates as published, MM/DD/YY).
+entries:
+- date: '2026-06-25'
+  title: New Tax & Agency Reference APIs
+  breaking: false
+  highlight: >-
+    Read endpoints for Check's tax and agency catalogs with canonical
+    jurisdiction codes.
+- date: '2026-06-25'
+  title: Balancing Payrolls & Fulfillment Receipts Integration Guidance
+  breaking: false
+  highlight: >-
+    Guidance on quarter-end tax reconciliation and employer-facing fulfillment
+    receipt flows.
+- date: '2026-06-25'
+  title: Limiting Remove Blocker Attempt Count
+  breaking: false
+  highlight: >-
+    Caps blocker-removal attempts at 2 per filing (effective July 1st).
+- date: '2026-06-25'
+  title: Tax Overrides for Federal and State Income Taxes
+  breaking: false
+  highlight: >-
+    Enables custom withholding tax amounts via a new API field.

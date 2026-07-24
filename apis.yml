@@ -1,8 +1,18 @@
 aid: check-technologies
 name: Check Technologies
-description: Check Technologies is a company surfaced as a portfolio company of battery-ventures and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Check Technologies (Check) is a Stripe-incubated embedded-payroll infrastructure
+  company whose API lets vertical SaaS, HR, and time-tracking platforms embed
+  full-service payroll directly into their own products. The Check API handles
+  the hard parts of running payroll — worker onboarding, pay schedules, earnings
+  and deductions, tax calculation, filing and remittance across federal, state,
+  and local jurisdictions, contractor payments, and money movement — behind a
+  white-labeled, developer-first surface. Platforms integrate through the REST
+  API, embeddable white-labeled React Components (Company Onboard, Run Payroll,
+  W-4 / tax setup, bank connection via Plaid, filing authorization), webhooks,
+  a Model Context Protocol server for AI agents, and a Python CLI. Check is
+  backed by Stripe, Index Ventures, Thrive Capital, Bedrock Capital, and
+  Battery Ventures, and powers payroll for platforms including Homebase.
 url: https://raw.githubusercontent.com/api-evangelist/check-technologies/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,14 +20,119 @@ x-backed-by:
 - battery-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Payroll
+- Embedded Finance
+- Fintech
+- Payments
+- Human Resources
+- Tax
+- Compliance
+- Developer Tools
+- API
+image: https://cdn.prod.website-files.com/671a2c705660d0119de1cc9f/671ac14172962caffbc11039_OG-IMAGE-1.png
+apis:
+- name: Check Payroll API
+  description: >-
+    Check's REST API for embedding full-service payroll — companies, employees,
+    contractors, pay schedules, payrolls, payments, tax filings, documents,
+    bank accounts, and webhooks — into a platform product.
+  humanURL: https://docs.checkhq.com/reference
+  baseURL: https://api.checkhq.com
+  tags:
+  - Payroll
+  - Payments
+  - Tax
+  - HR
+  properties:
+  - type: Documentation
+    url: https://docs.checkhq.com/docs/overview
+  - type: APIReference
+    url: https://docs.checkhq.com/reference
+  - type: Webhooks
+    url: https://docs.checkhq.com/docs/webhooks-1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/check-technologies-domain-security.yml
+- type: DeveloperPortal
+  url: https://docs.checkhq.com/
+- type: Documentation
+  url: https://docs.checkhq.com/docs/overview
+- type: APIReference
+  url: https://docs.checkhq.com/reference
+- type: GettingStarted
+  url: https://docs.checkhq.com/docs/quickstart
+- type: Authentication
+  url: authentication/check-technologies-authentication.yml
+- type: Support
+  url: https://docs.checkhq.com/
+- type: Blog
+  url: https://www.checkhq.com/resources/blog
+- type: GitHubOrganization
+  url: https://github.com/check-technologies
+- type: SignUp
+  url: https://sandbox.checkhq.com/
+- type: TermsOfService
+  url: https://www.checkhq.com/company/terms
+- type: PrivacyPolicy
+  url: https://www.checkhq.com/company/privacy
+- type: Security
+  url: https://www.checkhq.com/company/security
+- type: Compliance
+  url: https://www.checkhq.com/company/security
+- type: Conformance
+  url: conformance/check-technologies-conformance.yml
+- type: VulnerabilityDisclosure
+  url: security/check-technologies-vulnerability-disclosure.yml
+- type: StatusPage
+  url: https://status.checkhq.com
+- type: ChangeLog
+  url: changelog/check-technologies-changelog.yml
+- type: Deprecation
+  url: lifecycle/check-technologies-lifecycle.yml
+- type: Lifecycle
+  url: lifecycle/check-technologies-lifecycle.yml
+- type: Webhooks
+  url: asyncapi/check-technologies-webhooks.yml
+- type: MCPServer
+  url: mcp/check-technologies-mcp.yml
+- type: CLI
+  url: cli/check-technologies-cli.yml
+- type: Components
+  url: components/check-technologies-components.yml
+- type: Sandbox
+  url: sandbox/check-technologies-sandbox.yml
+- type: Conventions
+  url: conventions/check-technologies-conventions.yml
+- type: Idempotency
+  url: conventions/check-technologies-conventions.yml
+- type: ErrorCatalog
+  url: errors/check-technologies-error-codes.yml
+- type: LLMsTxt
+  url: llms/check-technologies-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

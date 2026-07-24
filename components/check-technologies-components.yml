@@ -1,0 +1,41 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.checkhq.com/docs/check-components
+name: Check Components
+description: >-
+  White-labeled, embeddable React UI components that render Check's
+  highest-friction payroll flows inside a platform's own product. Components are
+  generated server-side (a link/handoff is created via the API) and embedded in
+  the client; they emit DOM events on completion.
+docs:
+  overview: https://docs.checkhq.com/docs/check-components
+  library: https://docs.checkhq.com/docs/check-component-library
+  embedding: https://docs.checkhq.com/docs/embedding-a-component
+  events: https://docs.checkhq.com/docs/handling-component-events
+families:
+- family: Company onboarding & setup
+  components:
+  - Company Onboard
+  - Company Business Details
+  - Company Tax Setup
+  - Company Payment Setup (Plaid + debit authorization)
+  - Company Connect Bank Account
+  - Company Team Setup
+  - Company Signatory Agreements
+  - Company Terms of Service
+  - Company Filing Authorization
+  - Full Service Setup Submission
+  - Company Progress Tracker
+  - Company Verification Documents
+  - Company Pay History
+- family: Payroll
+  components:
+  - Run Payroll
+- family: Employee setup
+  components:
+  - Employee Withholdings Setup (W-4)
+  - Employee Tax Setup
+- family: Filing
+  components:
+  - Filing Preparation Checklist
+  - Filing Preview
