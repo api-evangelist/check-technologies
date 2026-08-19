@@ -4,16 +4,12 @@ status: published
 source: https://docs.checkhq.com/docs/overview-1
 server:
   name: check
-  description: >-
-    Official Check MCP server exposing the Check Payroll API as Model Context
-    Protocol tools for AI agents and operator copilots. Available hosted
-    (remote, run by Check) and self-hosted.
+  description: Official Check MCP server exposing the Check Payroll API as Model Context Protocol tools
+    for AI agents and operator copilots. Available hosted (remote, run by Check) and self-hosted.
   transport: http
   transport_detail: Streamable HTTP
-  auth: >-
-    Browser-based OAuth via Check Console login. The MCP client initiates an
-    OAuth flow, the user authorizes in the browser, and the client receives a
-    token automatically. No API keys to copy/paste.
+  auth: Browser-based OAuth via Check Console login. The MCP client initiates an OAuth flow, the user
+    authorizes in the browser, and the client receives a token automatically. No API keys to copy/paste.
   endpoints:
     production: https://mcp.checkhq.com/check/mcp
     sandbox: https://mcp.sandbox.checkhq.com/check/mcp
@@ -30,8 +26,6 @@ docs:
   overview: https://docs.checkhq.com/docs/overview-1
   hosted: https://docs.checkhq.com/docs/hosted-remote
   self_hosted: https://docs.checkhq.com/docs/self-hosted
-# Dynamic tool-discovery model: rather than loading all tools, the server
-# exposes three meta-tools that navigate 18 toolsets.
 meta_tools:
 - name: search_tools
   description: Locate relevant tools by keyword.
@@ -58,3 +52,10 @@ toolsets:
 - webhooks
 - workflows
 - workplaces
+deployment:
+  mode: remote
+  endpoint: https://mcp.checkhq.com/check/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
