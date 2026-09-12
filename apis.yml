@@ -94,6 +94,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Website
+  url: https://www.checkhq.com/
 - type: DomainSecurity
   url: security/check-technologies-domain-security.yml
 - type: DeveloperPortal
